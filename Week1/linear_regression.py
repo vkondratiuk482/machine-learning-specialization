@@ -19,6 +19,7 @@ class LinearRegression():
         b = self.start_b
 
         for i in range(epochs):
+            print(f"Epoch={i}, error={self.__squared_error(w, b, x_train, y_train)}")
             # Gradient Descent implementation
             step_w = w - self.learning_rate * self.__w_derivate(w, b, x_train, y_train)
             step_b = b - self.learning_rate * self.__b_derivate(w, b, x_train, y_train)
